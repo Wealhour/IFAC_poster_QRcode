@@ -33,7 +33,7 @@
         
         <header class="bg-ifacblue text-white p-8 text-center">
             <h1 class="text-3xl font-bold tracking-tight mb-2">Weihao Wang</h1>
-            <p class="text-blue-200 text-sm font-medium uppercase tracking-widest mb-4">IFAC Poster Presentation</p>
+            <p class="text-blue-200 text-sm font-medium uppercase tracking-widest mb-4">IFAC Poster Interactive Session</p>
             <h2 class="text-lg font-semibold leading-snug">
                 Velocity Tracking for Autonomous Railway-based Urbanloop Pods by Contraction
             </h2>
@@ -54,6 +54,10 @@
                     <li class="flex items-start">
                         <span class="font-semibold w-24 shrink-0">Time:</span> 
                         <span>15:30 - 17:30</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-semibold w-24 shrink-0">Date:</span>
+                        <span>Monday August 24, 2026</span>
                     </li>
                     <li class="flex items-start">
                         <span class="font-semibold w-24 shrink-0">Paper ID:</span> 
@@ -80,13 +84,12 @@
                     Connect on LinkedIn
                 </a>
 
-                <!-- Email Link Button -->
-                <a href="mailto:weihao.wang@univ-lorraine.fr" 
-                   class="flex items-center justify-center w-full bg-white border-2 border-gray-300 text-gray-700 font-semibold py-3 px-6 rounded-xl hover:bg-gray-50 transition-colors duration-200">
-                    <!-- Envelope Icon -->
-                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    weihao.wang@univ-lorraine.fr
-                </a>
+                <!-- Email Copy Row -->
+                <div class="flex items-center justify-between w-full bg-white border-2 border-gray-300 text-gray-700 font-semibold py-3 px-6 rounded-xl gap-3">
+                    <span id="emailText" class="break-all">weihao.wang@univ-lorraine.fr</span>
+                    <button id="copyEmailButton" type="button" class="shrink-0 bg-ifacblue text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-200">Copy</button>
+                </div>
+                <p id="copyStatus" class="text-xs text-gray-500 px-1" aria-live="polite"></p>
             </div>
         </section>
 
@@ -95,5 +98,44 @@
         </footer>
     </main>
 
+<script>
+    (function () {
+        const email = 'weihao.wang@univ-lorraine.fr';
+        const copyButton = document.getElementById('copyEmailButton');
+        const copyStatus = document.getElementById('copyStatus');
+
+        if (!copyButton || !copyStatus) return;
+
+        const setStatus = (message) => {
+            copyStatus.textContent = message;
+            window.clearTimeout(setStatus.timeoutId);
+            setStatus.timeoutId = window.setTimeout(() => {
+                copyStatus.textContent = '';
+            }, 2200);
+        };
+
+        copyButton.addEventListener('click', async () => {
+            try {
+                if (navigator.clipboard?.writeText) {
+                    await navigator.clipboard.writeText(email);
+                } else {
+                    const helper = document.createElement('textarea');
+                    helper.value = email;
+                    helper.setAttribute('readonly', '');
+                    helper.style.position = 'absolute';
+                    helper.style.left = '-9999px';
+                    document.body.appendChild(helper);
+                    helper.select();
+                    const copied = document.execCommand('copy');
+                    document.body.removeChild(helper);
+                    if (!copied) throw new Error('Copy command was not successful');
+                }
+                setStatus('Email copied to clipboard.');
+            } catch (error) {
+                setStatus('Copy failed. Please copy manually.');
+            }
+        });
+    })();
+</script>
 </body>
 </html>
