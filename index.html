@@ -138,6 +138,38 @@
             }
         });
     })();
+
+    (function () {
+        const counterNamespace = 'ifac_poster_qrcode';
+        const counterKey = 'website_views';
+        const statsToken = 'ifac-owner';
+        const counterHost = 'https://api.countapi.xyz';
+
+        const hitCounter = async () => {
+            try {
+                await fetch(`${counterHost}/hit/${counterNamespace}/${counterKey}`, { cache: 'no-store' });
+            } catch (error) {
+                // Keep page behavior unchanged when counter service is unavailable.
+            }
+        };
+
+        const showCounterForOwner = async () => {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('stats') !== statsToken) return;
+
+            try {
+                const response = await fetch(`${counterHost}/get/${counterNamespace}/${counterKey}`, { cache: 'no-store' });
+                if (!response.ok) return;
+                const data = await response.json();
+                console.info(`Total website views: ${data.value ?? 0}`);
+            } catch (error) {
+                console.info('Unable to read website view statistics right now.');
+            }
+        };
+
+        hitCounter();
+        showCounterForOwner();
+    })();
 </script>
 </body>
 </html>
