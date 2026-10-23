@@ -3,173 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFAC Poster - Weihao Wang</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Matching the 'whale' corporate blue from your Beamer poster
-                        ifacblue: '#1A598E',
-                        ifaclight: '#f0f5fa'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="A poster presented at the IFAC World Congress 2026 in Busan, South Korea. Read the full paper and view the accompanying certificate.">
+    <title>IFAC 2026 · Poster resources</title>
+    <link rel="canonical" href="https://wealhour.github.io/IFAC_poster_QRcode/">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        :root { color-scheme: light; --blue: #1a598e; --ink: #23364a; --muted: #596c7c; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 32px 16px; background: #f0f4f8; color: var(--ink); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+        main { width: 100%; max-width: 576px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 40px #17355012; }
+        header { padding: 36px 28px; background: var(--blue); color: white; text-align: center; }
+        h1 { margin: 0 0 12px; font-size: clamp(1.65rem, 5vw, 2rem); line-height: 1.2; letter-spacing: -.025em; }
+        header p { margin: 0; color: #e1edf7; font-size: 1rem; }
+        .content { padding: 28px; }
+        nav { display: grid; gap: 14px; }
+        a { color: var(--blue); }
+        a:focus-visible { outline: 3px solid #d68100; outline-offset: 5px; }
+        .button { display: flex; gap: 12px; align-items: center; justify-content: center; min-height: 56px; padding: 13px 18px; border: 2px solid var(--blue); border-radius: 12px; font-size: 1rem; font-weight: 650; line-height: 1.4; text-align: center; text-decoration: none; }
+        .button svg { width: 22px; height: 22px; flex-shrink: 0; }
+        .primary { color: white; background: var(--blue); }
+        .primary:hover { background: #124571; border-color: #124571; }
+        .secondary:hover { background: #eef5fa; }
+        .certificate { margin-top: 32px; padding-top: 24px; border-top: 1px solid #e1e8ef; }
+        h2 { margin: 0 0 16px; font-size: 1.15rem; font-weight: 650; }
+        .preview { display: block; border: 1px solid #dce4eb; border-radius: 8px; overflow: hidden; background: #f7f8fa; }
+        .preview img { display: block; width: 100%; height: auto; }
+        .pdf-link { margin-top: 16px; }
+        .hint { margin: 10px 0 0; color: var(--muted); text-align: center; font-size: .875rem; }
+        footer { padding: 20px 24px; border-top: 1px solid #e1e8ef; background: #f8fafc; color: var(--muted); text-align: center; font-size: .8rem; }
+        footer p { margin: 0; }
+        @media (max-width: 380px) { body { padding: 16px 12px; } header { padding: 28px 20px; } .content { padding: 22px 18px; } .button { padding-inline: 12px; } }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800 antialiased min-h-screen flex items-center justify-center p-4">
-
-    <main class="bg-white max-w-xl w-full rounded-2xl shadow-xl overflow-hidden">
-        
-        <header class="bg-ifacblue text-white p-8 text-center">
-            <h1 class="text-3xl font-bold tracking-tight mb-2">Weihao Wang</h1>
-            <p class="text-blue-200 text-sm font-medium uppercase tracking-widest mb-4">IFAC Poster Interactive Session</p>
-            <h2 class="text-lg font-semibold leading-snug">
-                Velocity Tracking for Autonomous Railway-based Urbanloop Pods by Contraction
-            </h2>
+<body>
+    <main>
+        <header>
+            <h1>Poster resources</h1>
+            <p>This poster was presented at the IFAC World Congress 2026 in Busan, South Korea.</p>
         </header>
-
-        <section class="p-8">
-            <div class="bg-ifaclight border-l-4 border-ifacblue rounded-r-lg p-5 mb-8">
-                <h3 class="text-ifacblue font-bold text-lg mb-3 flex items-center">
-                    <!-- Map Pin Icon -->
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    Presentation Details
-                </h3>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex items-start">
-                        <span class="font-semibold w-24 shrink-0">Location:</span> 
-                        <span>Convention Hall - Room 301</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="font-semibold w-24 shrink-0">Time:</span> 
-                        <span>15:30 - 17:30</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="font-semibold w-24 shrink-0">Date:</span>
-                        <span>Monday August 24, 2026</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="font-semibold w-24 shrink-0">Paper ID:</span> 
-                        <span class="bg-blue-100 text-ifacblue px-2 py-0.5 rounded font-mono text-sm">MoC38-06.8</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                
-                <!-- Paper Link Button -->
-                <a href="https://hal.science/hal-05399074v2" target="_blank" rel="noopener noreferrer" 
-                   class="group flex items-center justify-center w-full bg-ifacblue text-white font-semibold py-4 px-6 rounded-xl shadow-md hover:bg-blue-800 hover:shadow-lg transition-all duration-200">
-                    <!-- Document Icon -->
-                    <svg class="w-6 h-6 mr-3 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <div class="content">
+            <nav aria-label="Paper and contact links">
+                <a class="button primary" href="https://hal.science/hal-05399074v2" target="_blank" rel="noopener noreferrer">
+                    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6l6 6v10a2 2 0 0 1-2 2ZM13 3v6h6"/></svg>
                     Read the Full Paper (HAL)
                 </a>
-
-                <!-- LinkedIn Link Button -->
-                <a href="https://www.linkedin.com/in/weihao-wang-b192b4271/" target="_blank" rel="noopener noreferrer" 
-                   class="flex items-center justify-center w-full bg-white border-2 border-[#0077b5] text-[#0077b5] font-semibold py-3 px-6 rounded-xl hover:bg-[#f0f7fb] transition-colors duration-200">
-                    <!-- LinkedIn Icon -->
-                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <a class="button secondary" href="https://www.linkedin.com/in/weihao-wang-b192b4271/" target="_blank" rel="noopener noreferrer">
+                    <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     Connect on LinkedIn
                 </a>
-
-                <!-- Email Copy Row -->
-                <div class="relative flex items-center justify-center w-full bg-white border-2 border-gray-300 text-gray-700 font-semibold py-3 pl-6 pr-14 rounded-xl">
-                    <span id="emailText" class="break-all text-center">weihao.wang@univ-lorraine.fr</span>
-                    <button id="copyEmailButton" type="button" aria-label="Copy email address" class="absolute right-1 inline-flex items-center justify-center shrink-0 text-ifacblue p-2 rounded-lg hover:bg-blue-50 transition-colors duration-200">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    </button>
-                </div>
-                <p id="copyStatus" class="text-xs text-gray-500 px-1 text-center" aria-live="polite"></p>
-            </div>
-        </section>
-
-        <footer class="bg-gray-50 border-t border-gray-200 p-6 text-center text-sm text-gray-500">
-            <p>Université de Lorraine, CNRS, CRAN, Nancy, France</p>
-        </footer>
+            </nav>
+            <section class="certificate" aria-labelledby="certificate-title">
+                <h2 id="certificate-title">Certificate</h2>
+                <a class="preview" href="assets/ifac-certificate.pdf" target="_blank" rel="noopener" aria-label="Open the certificate PDF in a new tab">
+                    <img src="assets/certificate-preview.jpg" width="1199" height="1700" alt="Preview of the IFAC certificate" loading="lazy" decoding="async">
+                </a>
+                <a class="button secondary pdf-link" href="assets/ifac-certificate.pdf" target="_blank" rel="noopener">Open certificate (PDF)</a>
+                <p class="hint">Tap to open and zoom · Original PDF, 7.3 MB</p>
+            </section>
+        </div>
+        <footer><p>Université de Lorraine, CNRS, CRAN, Nancy, France</p></footer>
     </main>
-
-<script>
-    (function () {
-        const email = 'weihao.wang@univ-lorraine.fr';
-        const copyButton = document.getElementById('copyEmailButton');
-        const copyStatus = document.getElementById('copyStatus');
-
-        if (!copyButton || !copyStatus) return;
-
-        const setStatus = (message) => {
-            copyStatus.textContent = message;
-            window.clearTimeout(setStatus.timeoutId);
-            setStatus.timeoutId = window.setTimeout(() => {
-                copyStatus.textContent = '';
-            }, 2200);
-        };
-
-        copyButton.addEventListener('click', async () => {
-            try {
-                if (navigator.clipboard?.writeText) {
-                    await navigator.clipboard.writeText(email);
-                } else {
-                    const helper = document.createElement('textarea');
-                    helper.value = email;
-                    helper.setAttribute('readonly', '');
-                    helper.style.position = 'absolute';
-                    helper.style.left = '-9999px';
-                    document.body.appendChild(helper);
-                    helper.select();
-                    const copied = document.execCommand('copy');
-                    document.body.removeChild(helper);
-                    if (!copied) throw new Error('Copy command was not successful');
-                }
-                setStatus('Email copied to clipboard.');
-            } catch (error) {
-                setStatus('Copy failed. Please copy manually.');
-            }
-        });
-    })();
-
-    (function () {
-        const counterNamespace = 'ifac_poster_qrcode';
-        const counterKey = 'website_views';
-        const statsToken = 'ifac-owner';
-        const counterHost = 'https://api.countapi.xyz';
-
-        const hitCounter = async () => {
-            try {
-                await fetch(`${counterHost}/hit/${counterNamespace}/${counterKey}`, { cache: 'no-store' });
-            } catch (error) {
-                // Keep page behavior unchanged when counter service is unavailable.
-            }
-        };
-
-        const showCounterForOwner = async () => {
-            const params = new URLSearchParams(window.location.search);
-            if (params.get('stats') !== statsToken) return;
-
-            try {
-                const response = await fetch(`${counterHost}/get/${counterNamespace}/${counterKey}`, { cache: 'no-store' });
-                if (!response.ok) return;
-                const data = await response.json();
-                console.info(`Total website views: ${data.value ?? 0}`);
-            } catch (error) {
-                console.info('Unable to read website view statistics right now.');
-            }
-        };
-
-        hitCounter();
-        showCounterForOwner();
-    })();
-</script>
 </body>
 </html>
